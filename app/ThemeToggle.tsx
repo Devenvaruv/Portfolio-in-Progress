@@ -24,7 +24,7 @@ function getInitialTheme(): Theme {
     return savedTheme;
   }
 
-  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "night" : "day";
+  return "day";
 }
 
 export default function ThemeToggle() {
