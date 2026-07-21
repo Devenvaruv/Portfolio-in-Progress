@@ -348,6 +348,7 @@ ol {
 }
 
 .browser-favorite {
+  appearance: none;
   display: inline-grid;
   place-items: center;
   width: 31px;
@@ -357,8 +358,8 @@ ol {
   border-radius: 5px 3px 6px 4px / 4px 6px 3px 5px;
   background:
     var(--scribble),
-    rgba(244, 185, 49, 0.2);
-  color: #b87800;
+    rgba(244, 185, 49, 0.32);
+  color: #795000;
   cursor: pointer;
   transform: rotate(-1.2deg);
 }
@@ -367,8 +368,8 @@ ol {
 .browser-favorite:focus-visible {
   background:
     var(--scribble),
-    rgba(244, 185, 49, 0.34);
-  color: #986400;
+    rgba(244, 185, 49, 0.46);
+  color: #5f3f00;
   outline: 2px solid rgba(184, 120, 0, 0.28);
   outline-offset: 2px;
   transform: translateY(-1px) rotate(0.8deg);
@@ -378,11 +379,19 @@ ol {
   transform: translateY(1px) rotate(-0.2deg);
 }
 
+.browser-favorite .icon-main {
+  fill: #f4b931;
+  stroke: #795000;
+}
+
 .browser-favorite .icon-main path {
-  fill: rgba(244, 185, 49, 0.72);
+  fill: #f4b931;
+  stroke: #795000;
 }
 
 .browser-favorite .icon-ghost {
+  fill: rgba(244, 185, 49, 0.5);
+  stroke: #795000;
   opacity: 0.18;
 }
 
