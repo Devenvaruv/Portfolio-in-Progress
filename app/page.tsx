@@ -339,7 +339,9 @@ function BrowserChrome() {
       <div className="address-bar">
         <Icon name="lock" size={18} />
         <span>deven-varu.portfolio</span>
-        <Icon name="star" size={24} />
+        <button className="browser-favorite" type="button" aria-label="Bookmark portfolio" aria-pressed="true">
+          <Icon name="star" size={24} />
+        </button>
       </div>
       <Icon className="browser-menu" name="more" size={26} />
     </header>

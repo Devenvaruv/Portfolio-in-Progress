@@ -347,6 +347,45 @@ ol {
   white-space: nowrap;
 }
 
+.browser-favorite {
+  display: inline-grid;
+  place-items: center;
+  width: 31px;
+  height: 29px;
+  padding: 0;
+  border: 1.5px solid rgba(48, 50, 47, 0.45);
+  border-radius: 5px 3px 6px 4px / 4px 6px 3px 5px;
+  background:
+    var(--scribble),
+    rgba(244, 185, 49, 0.2);
+  color: #b87800;
+  cursor: pointer;
+  transform: rotate(-1.2deg);
+}
+
+.browser-favorite:hover,
+.browser-favorite:focus-visible {
+  background:
+    var(--scribble),
+    rgba(244, 185, 49, 0.34);
+  color: #986400;
+  outline: 2px solid rgba(184, 120, 0, 0.28);
+  outline-offset: 2px;
+  transform: translateY(-1px) rotate(0.8deg);
+}
+
+.browser-favorite:active {
+  transform: translateY(1px) rotate(-0.2deg);
+}
+
+.browser-favorite .icon-main path {
+  fill: rgba(244, 185, 49, 0.72);
+}
+
+.browser-favorite .icon-ghost {
+  opacity: 0.18;
+}
+
 .browser-menu {
   justify-self: end;
 }
