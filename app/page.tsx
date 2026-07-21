@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 type IconName =
   | "activity"
@@ -366,9 +367,7 @@ function SiteHeader() {
         ))}
       </nav>
 
-      <button className="theme-toggle" type="button" aria-label="Toggle theme">
-        <Icon name="sun" size={38} />
-      </button>
+      <ThemeToggle />
     </header>
   );
 }
