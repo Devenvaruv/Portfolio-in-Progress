@@ -476,7 +476,7 @@ function OverviewPanel() {
       <p className="overview-copy">
         I am a Master&apos;s in Computer Science student at the University of San Francisco building AI, computer
         vision, and full-stack systems. My work spans A2A protocol implementation at SnapLogic, AI catalog automation
-        at Pistachio, YOLOv8 research pipelines, and first-prize hackathon work on LLM-powered SQL retrieval.
+        at Pistachio, and YOLOv8 research pipelines.
       </p>
       <div className="profile-grid">
         {profileCards.map((card) => (
@@ -636,7 +636,6 @@ function ProjectBuildsSection() {
       <header className="project-builds-heading">
         <span>PROJECT APPENDIX</span>
         <h2 id="project-builds-title">DETAILED PROJECT INFRASTRUCTURE</h2>
-        <p>Five real project systems sketched as deployment-ready architecture notes.</p>
       </header>
 
       <div className="project-build-grid">
