@@ -35,6 +35,7 @@ type IconName =
 
 interface Project {
   title: string;
+  period: string;
   description: string;
   tags: string[];
 }
@@ -112,19 +113,34 @@ const roles = ["Software Engineer", "Full-Stack Developer", "AI / ML Engineer", 
 
 const projects: Project[] = [
   {
-    title: "AI DOCS COPILOT",
-    description: "AI assistant for smart document understanding.",
-    tags: ["Next.js", "LangChain", "OpenAI"],
+    title: "INTERVIEWITHAI",
+    period: "JUN 2026 - PRESENT",
+    description: "AI-powered interview practice platform with voice interviews, coding rounds, and structured feedback.",
+    tags: ["Next.js", "NestJS", "Vapi"],
   },
   {
-    title: "TASKFLOW PRO",
-    description: "Collaborative task management platform.",
-    tags: ["React", "Node.js", "PostgreSQL"],
+    title: "CODEX SESSION VISUALIZER",
+    period: "JUL 2026",
+    description: "VS Code extension that turns raw Codex sessions into file activity labels, logs, and agent graphs.",
+    tags: ["VS Code", "TypeScript", "Developer Tools"],
   },
   {
-    title: "PORTFOLIO API",
-    description: "RESTful API with auth, analytics & real-time data.",
-    tags: ["FastAPI", "Redis", "Docker"],
+    title: "A2A MULTI-AGENT BUILDER",
+    period: "JAN 2026 - MAR 2026",
+    description: "Platform for creating, versioning, and orchestrating dynamic multi-agent AI systems.",
+    tags: ["A2A", "TypeScript", "MongoDB Atlas"],
+  },
+  {
+    title: "10-AGENT AI BOARD GAME",
+    period: "JAN 2026 - FEB 2026",
+    description: "Hierarchical multi-agent board game simulation with autonomous characters and a Dungeon Master.",
+    tags: ["Multi-Agent AI", "JSON Actions", "Game Systems"],
+  },
+  {
+    title: "ROAD ASSET DETECTION",
+    period: "BOONE COUNTY",
+    description: "YOLO-based computer vision pipeline for detecting and mapping roadway infrastructure from 360 imagery.",
+    tags: ["Python", "YOLO", "React"],
   },
 ];
 
@@ -156,52 +172,84 @@ const architectureNodes = [
 
 const projectBuilds: ProjectBuild[] = [
   {
-    title: "AI DOCS COPILOT",
-    label: "RAG DOCUMENT INTELLIGENCE",
+    title: "INTERVIEWITHAI",
+    label: "AI INTERVIEW PRACTICE PLATFORM",
     summary:
-      "A document assistant that ingests PDFs, chunks content, embeds knowledge, and answers questions with source-backed responses.",
-    stack: ["Next.js", "FastAPI", "OpenAI", "LangChain", "PostgreSQL", "S3"],
+      "An end-to-end product for realistic voice interviews, technical coding problems, transcripts, and AI-generated performance evaluations.",
+    stack: ["Next.js", "React", "TypeScript", "NestJS", "Vapi", "Monaco Editor", "Cloud Infrastructure"],
     infrastructure: [
-      { icon: "monitor", title: "WEB CLIENT", detail: "Upload, chat, citations" },
-      { icon: "server", title: "API GATEWAY", detail: "Auth, rate limits, jobs" },
-      { icon: "upload", title: "INGEST WORKER", detail: "Parse, chunk, normalize" },
-      { icon: "chip", title: "EMBEDDINGS", detail: "Vectors + retrieval" },
-      { icon: "database", title: "VECTOR STORE", detail: "Docs, chunks, metadata" },
-      { icon: "activity", title: "OBSERVABILITY", detail: "Latency, token cost, errors" },
+      { icon: "monitor", title: "WEB APP", detail: "Interview flow and coding UI" },
+      { icon: "mail", title: "VOICE AGENTS", detail: "Real-time Vapi conversations" },
+      { icon: "code", title: "CODE EDITOR", detail: "Monaco technical rounds" },
+      { icon: "server", title: "SESSION API", detail: "Questions, transcripts, submissions" },
+      { icon: "chip", title: "AI EVALUATOR", detail: "Structured performance feedback" },
+      { icon: "cloud", title: "DEPLOYMENT", detail: "Full-stack cloud rollout" },
     ],
-    notes: ["Streaming answers", "Citation-aware prompts", "Async ingestion queue"],
+    notes: ["Voice interview simulation", "Coding challenge workspace", "Session history and transcripts"],
   },
   {
-    title: "TASKFLOW PRO",
-    label: "TEAM WORKFLOW PLATFORM",
+    title: "CODEX SESSION VISUALIZER",
+    label: "VS CODE EXTENSION FOR AI CODING INSPECTION",
     summary:
-      "A collaborative task system for planning work, assigning owners, syncing status, and tracking delivery across teams.",
-    stack: ["React", "Node.js", "PostgreSQL", "Redis", "WebSockets", "Docker"],
+      "A developer tool that visualizes how Codex explores and changes a codebase, including file labels, readable logs, and multi-agent graphs.",
+    stack: ["VS Code Extension API", "TypeScript", "Codex Session Data", "Graph Visualization", "File Tree UI"],
     infrastructure: [
-      { icon: "users", title: "TEAM CLIENTS", detail: "Boards, filters, activity" },
-      { icon: "lock", title: "AUTH SERVICE", detail: "Sessions, roles, orgs" },
-      { icon: "server", title: "TASK API", detail: "CRUD, comments, search" },
-      { icon: "activity", title: "REALTIME BUS", detail: "Presence, updates, alerts" },
-      { icon: "database", title: "PRIMARY DB", detail: "Tasks, teams, audit log" },
-      { icon: "cloud", title: "DEPLOYMENT", detail: "Containers + CI/CD" },
+      { icon: "book", title: "SESSION INPUT", detail: "Raw Codex activity data" },
+      { icon: "server", title: "PARSER", detail: "Prompts, responses, tools" },
+      { icon: "bars", title: "FILE LABELS", detail: "F, R, E, C, D indicators" },
+      { icon: "database", title: "LOG MODEL", detail: "Structured execution flow" },
+      { icon: "users", title: "AGENT GRAPH", detail: "Main session to sub-agents" },
+      { icon: "monitor", title: "VS CODE UI", detail: "Tree badges and views" },
     ],
-    notes: ["Optimistic UI", "Role-based access", "Realtime project activity"],
+    notes: ["Folder priority D > C > E > R > F", "Readable tool and file-operation logs", "Multi-agent workflow visualization"],
   },
   {
-    title: "PORTFOLIO SYSTEM",
-    label: "EDGE-DELIVERED PERSONAL API",
+    title: "A2A MULTI-AGENT BUILDER",
+    label: "DYNAMIC AGENT ORCHESTRATION PLATFORM",
     summary:
-      "This portfolio treated as a live system: static UI, API-style content modules, deployment automation, and lightweight monitoring.",
-    stack: ["Next.js", "TypeScript", "Vercel", "GitHub Actions", "Analytics", "Edge Cache"],
+      "A platform for building multi-agent AI systems from versioned configurations rather than hardcoded workflows.",
+    stack: ["A2A", "TypeScript", "MongoDB Atlas", "Prompt Versioning", "Runtime Orchestration", "Execution Logs"],
     infrastructure: [
-      { icon: "code", title: "STATIC UI", detail: "Sketch board interface" },
-      { icon: "github", title: "SOURCE CONTROL", detail: "Branches, reviews, deploys" },
-      { icon: "tool", title: "BUILD PIPELINE", detail: "Lint, typecheck, bundle" },
-      { icon: "cloud", title: "EDGE HOSTING", detail: "CDN, cache, SSL" },
-      { icon: "bars", title: "ANALYTICS", detail: "Traffic and conversion" },
-      { icon: "activity", title: "HEALTH CHECKS", detail: "Uptime and regressions" },
+      { icon: "user", title: "REQUEST", detail: "Task and context input" },
+      { icon: "server", title: "ORCHESTRATOR", detail: "Plans runtime teams" },
+      { icon: "users", title: "AGENT FACTORY", detail: "Specialized agents on demand" },
+      { icon: "database", title: "CONFIG STORE", detail: "Prompts, routes, context" },
+      { icon: "refresh", title: "VERSIONING", detail: "Rollback and reproducibility" },
+      { icon: "check", title: "AGGREGATOR", detail: "Structured final outputs" },
     ],
-    notes: ["Static-first delivery", "Design-system CSS", "Fast rebuild workflow"],
+    notes: ["Parallel and sequential execution", "Traceable prompt updates", "Shared context and logs"],
+  },
+  {
+    title: "10-AGENT AI BOARD GAME",
+    label: "HIERARCHICAL MULTI-AGENT GAME SIMULATION",
+    summary:
+      "A custom board game simulation where autonomous AI characters move, talk, act, and fight under a Dungeon Master agent.",
+    stack: ["Multi-Agent Systems", "Agent Orchestration", "Structured JSON", "Game State", "Dialogue Agents", "Action Agents"],
+    infrastructure: [
+      { icon: "book", title: "GAME RULES", detail: "Board, actions, combat" },
+      { icon: "user", title: "DUNGEON MASTER", detail: "World control and validation" },
+      { icon: "users", title: "PLAYER AGENTS", detail: "Personalities and decisions" },
+      { icon: "mail", title: "DIALOGUE AGENTS", detail: "Character interactions" },
+      { icon: "code", title: "ACTION AGENTS", detail: "JSON movement and combat" },
+      { icon: "database", title: "GAME STATE", detail: "Shared environment updates" },
+    ],
+    notes: ["10-agent hierarchy", "Autonomous movement and combat", "Personality-driven decisions"],
+  },
+  {
+    title: "ROAD ASSET DETECTION",
+    label: "YOLO COMPUTER VISION MAPPING PIPELINE",
+    summary:
+      "A computer vision workflow for Boone County that detects road infrastructure from 360-degree roadway imagery and exports mapping-ready data.",
+    stack: ["Python", "YOLO", "Computer Vision", "Dataset Augmentation", "JSON", "CSV", "React"],
+    infrastructure: [
+      { icon: "upload", title: "IMAGE INPUT", detail: "360 roadway imagery" },
+      { icon: "target", title: "YOLO MODELS", detail: "Infrastructure detection" },
+      { icon: "refresh", title: "TRAINING LOOP", detail: "Refinement and augmentation" },
+      { icon: "database", title: "DETECTIONS", detail: "JSON and CSV outputs" },
+      { icon: "monitor", title: "REVIEW APP", detail: "Bounding boxes and segments" },
+      { icon: "map-pin", title: "MAPPING FLOW", detail: "Road asset handoff" },
+    ],
+    notes: ["0.80+ mAP on key classes", "20%+ mAP improvement", "Reduced manual image labeling"],
   },
 ];
 
@@ -218,7 +266,6 @@ export default function Home() {
 
           <aside className="left-rail">
             <StatusPanel />
-            <LegendPanel />
             <PrinciplesPanel />
             <SystemLoadPanel />
           </aside>
@@ -260,7 +307,7 @@ function BrowserChrome() {
       </div>
       <div className="address-bar">
         <Icon name="lock" size={18} />
-        <span>devenvaru.dev</span>
+        <span>http://localhost:3000/</span>
         <Icon name="star" size={24} />
       </div>
       <Icon className="browser-menu" name="more" size={26} />
@@ -306,47 +353,6 @@ function StatusPanel() {
             <span>{item.label}</span>
           </li>
         ))}
-      </ul>
-    </SketchPanel>
-  );
-}
-
-function LegendPanel() {
-  return (
-    <SketchPanel className="legend-panel compact-panel" title="LEGEND / KEY" icon="monitor">
-      <ul className="legend-list">
-        <li>
-          <span className="legend-line flow" aria-hidden="true" />
-          <span>DATA FLOW</span>
-        </li>
-        <li>
-          <span className="legend-line control" aria-hidden="true" />
-          <span>CONTROL FLOW</span>
-        </li>
-        <li>
-          <span className="legend-line dependency" aria-hidden="true" />
-          <span>DEPENDENCY</span>
-        </li>
-        <li>
-          <Icon name="server" size={18} />
-          <span>DATA STORES</span>
-        </li>
-        <li>
-          <Icon name="box" size={18} />
-          <span>SERVICE / MODULE</span>
-        </li>
-        <li>
-          <Icon name="database" size={18} />
-          <span>DATABASE</span>
-        </li>
-        <li>
-          <Icon name="cloud" size={18} />
-          <span>EXTERNAL LINK</span>
-        </li>
-        <li>
-          <Icon name="user" size={18} />
-          <span>USER / CLIENT</span>
-        </li>
       </ul>
     </SketchPanel>
   );
@@ -496,13 +502,14 @@ function ProjectsPanel() {
               <Icon name="chip" size={21} />
             </div>
             <h3>{project.title}</h3>
+            <span className="project-period">{project.period}</span>
             <p>{project.description}</p>
             <ul className="tag-list">
               {project.tags.map((tag) => (
                 <li key={tag}>{tag}</li>
               ))}
             </ul>
-            <SketchButton href="#projects">VIEW ARCHITECTURE</SketchButton>
+            <SketchButton href="#project-builds-title">VIEW ARCHITECTURE</SketchButton>
           </article>
         ))}
       </div>
@@ -601,7 +608,7 @@ function ProjectBuildsSection() {
       <header className="project-builds-heading">
         <span>PROJECT APPENDIX</span>
         <h2 id="project-builds-title">DETAILED PROJECT INFRASTRUCTURE</h2>
-        <p>Three project systems sketched as deployment-ready architecture notes.</p>
+        <p>Five real project systems sketched as deployment-ready architecture notes.</p>
       </header>
 
       <div className="project-build-grid">
