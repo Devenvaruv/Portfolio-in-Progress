@@ -1114,15 +1114,21 @@ ol {
 
 .card-top {
   position: absolute;
-  inset: 12px 9px auto;
-  justify-content: space-between;
+  inset: 12px 12px auto;
+  justify-content: flex-start;
+  gap: 9px;
 }
 
 .card-top span {
-  width: 8px;
-  height: 6px;
-  border: 1px solid var(--pencil);
-  border-radius: 2px;
+  width: 7px;
+  height: 7px;
+  border: 1.4px solid var(--pencil);
+  border-radius: 999px;
+  background: rgba(247, 250, 242, 0.74);
+}
+
+.card-top .icon {
+  margin-left: auto;
 }
 
 .project-card h3 {

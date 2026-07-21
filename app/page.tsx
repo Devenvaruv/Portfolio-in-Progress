@@ -525,7 +525,7 @@ function ProjectsPanel() {
         {projects.slice(0, 3).map((project) => (
           <article key={project.title} className="project-card">
             <div className="card-top" aria-hidden="true">
-              {Array.from({ length: 6 }).map((_, index) => (
+              {Array.from({ length: 3 }).map((_, index) => (
                 <span key={index} />
               ))}
               <Icon name="chip" size={21} />
