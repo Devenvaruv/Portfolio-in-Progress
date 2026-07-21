@@ -1497,11 +1497,12 @@ ol {
 
 .infra-arrow {
   position: absolute;
-  top: 39px;
+  top: 50%;
   right: -19px;
   z-index: 3;
   width: 22px;
   border-top: 1.5px solid var(--pencil);
+  transform: translateY(-50%);
 }
 
 .infra-arrow::after {
