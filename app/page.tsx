@@ -921,9 +921,9 @@ const iconPaths: Record<IconName, ReactNode> = {
   ),
   tool: (
     <>
-      <path d="M23 36 11 48l5 5 12-12" />
-      <path d="M41 13c5 1 8 5 9 10l-9 9-9-9 9-10Z" />
-      <path d="M30 34 16 20l-4 4 14 14M37 29l13 13-8 8-13-13" />
+      <path d="M42 11c5 2 9 6 10 12L40 35l-11-11 12-12c0-1 0-1 1-1Z" />
+      <path d="M31 31 13 49l6 6 18-18" />
+      <circle cx="45" cy="20" r="3" />
     </>
   ),
   upload: (
