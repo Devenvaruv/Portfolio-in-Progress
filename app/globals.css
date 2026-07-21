@@ -497,7 +497,7 @@ ol {
 .system-board {
   position: relative;
   display: grid;
-  grid-template-columns: 190px 300px 420px 200px 300px;
+  grid-template-columns: 190px minmax(220px, 250px) 420px minmax(220px, 250px) 300px;
   grid-template-rows: 185px minmax(270px, auto) minmax(285px, auto) minmax(150px, auto);
   grid-template-areas:
     "rail visitor hero github quick"
@@ -741,9 +741,11 @@ ol {
   display: grid;
   justify-items: center;
   align-self: center;
+  justify-self: center;
   gap: 6px;
   font-size: 0.8rem;
   text-align: center;
+  width: min(100%, 170px);
 }
 
 .visitor-node {
