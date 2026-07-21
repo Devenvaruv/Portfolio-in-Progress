@@ -806,7 +806,10 @@ const iconPaths: Record<IconName, ReactNode> = {
   chip: (
     <>
       <rect height="28" rx="5" width="28" x="18" y="18" />
-      <path d="M25 32c0-6 11-6 11 0 0 6-11 5-11 11M39 25c-5 0-8 4-8 9M12 25h6M12 39h6M46 25h6M46 39h6M25 12v6M39 12v6M25 46v6M39 46v6" />
+      <circle cx="26" cy="28" r="3" />
+      <circle cx="38" cy="28" r="3" />
+      <circle cx="32" cy="39" r="3" />
+      <path d="M29 30 32 36M35 30 32 36M29 28h6M12 25h6M12 39h6M46 25h6M46 39h6M25 12v6M39 12v6M25 46v6M39 46v6" />
     </>
   ),
   cloud: <path d="M20 44h27c7 0 12-5 12-11s-5-11-12-11h-1C43 14 36 9 28 11c-7 1-12 6-14 13-6 1-10 5-10 10 0 6 5 10 16 10Z" />,
