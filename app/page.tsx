@@ -884,7 +884,13 @@ const iconPaths: Record<IconName, ReactNode> = {
       <path d="M39 13c7 2 12 7 14 14M40 23c3 1 5 3 6 6" />
     </>
   ),
-  refresh: <path d="M48 21A20 20 0 1 0 52 36M48 21V10h-11" />,
+  refresh: (
+    <>
+      <path d="M48 20a20 20 0 1 0 5 18" />
+      <path d="M49 9v12H37" />
+      <path d="M37 21 49 9" />
+    </>
+  ),
   rocket: (
     <>
       <path d="M31 36 20 47l-3-11 11-11c8-8 18-13 26-13-1 8-5 18-13 26L31 49l-11-3 11-10Z" />
