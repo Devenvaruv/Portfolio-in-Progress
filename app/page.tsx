@@ -22,6 +22,7 @@ type IconName =
   | "map-pin"
   | "monitor"
   | "more"
+  | "phone"
   | "refresh"
   | "rocket"
   | "server"
@@ -58,6 +59,7 @@ interface Endpoint {
   path: string;
   value: string;
   action: string;
+  href: string;
 }
 
 interface InfrastructureNode {
@@ -79,37 +81,37 @@ const navItems = ["HOME", "ABOUT", "PROJECTS", "SKILLS", "EXPERIENCE", "CONTACT"
 
 const statusItems = [
   { icon: "activity" as IconName, label: "STATUS: ONLINE" },
-  { icon: "globe" as IconName, label: "LOCATION: REMOTE" },
-  { icon: "activity" as IconName, label: "AVAILABILITY: 24/7" },
-  { icon: "bars" as IconName, label: "UPTIME: 99.99%" },
+  { icon: "map-pin" as IconName, label: "LOCATION: SAN FRANCISCO, CA" },
+  { icon: "book" as IconName, label: "MSCS: USF 2026" },
+  { icon: "bars" as IconName, label: "FOCUS: AI + FULL-STACK" },
 ];
 
 const quickLinks = ["/about", "/projects", "/skills", "/experience", "/contact"];
 
 const principles = [
-  "BUILD SCALABLE SYSTEMS",
-  "SOLVE REAL PROBLEMS",
-  "WRITE CLEAN CODE",
-  "SHIP IMPACT",
-  "CONTINUOUSLY LEARN",
+  "TRANSLATE SPECS INTO SYSTEMS",
+  "AUTOMATE MANUAL WORKFLOWS",
+  "VALIDATE WITH REAL DATA",
+  "SHIP AI-POWERED TOOLS",
+  "BUILD CLOUD-READY PIPELINES",
 ];
 
 const profileCards = [
-  { icon: "code" as IconName, title: "ENGINEER", detail: "by Craft" },
-  { icon: "chip" as IconName, title: "THINKER", detail: "by Design" },
-  { icon: "rocket" as IconName, title: "BUILDER", detail: "by Impact" },
-  { icon: "bars" as IconName, title: "OPTIMIZER", detail: "by Data" },
+  { icon: "code" as IconName, title: "JAVA / TS", detail: "A2A systems" },
+  { icon: "chip" as IconName, title: "AI / ML", detail: "LLMs + YOLO" },
+  { icon: "cloud" as IconName, title: "CLOUD", detail: "AWS + GCP" },
+  { icon: "bars" as IconName, title: "DATA", detail: "SQL + pipelines" },
 ];
 
 const journeySteps: JourneyStep[] = [
-  { icon: "book", title: "LEARN", copy: "Master concepts & technologies" },
-  { icon: "tool", title: "BUILD", copy: "Design & develop solutions" },
-  { icon: "upload", title: "DEPLOY", copy: "Ship reliable systems to production" },
-  { icon: "users", title: "LEAD", copy: "Collaborate, mentor & drive outcomes" },
-  { icon: "target", title: "IMPACT", copy: "Solve real problems & create value" },
+  { icon: "server", title: "SNAPLOGIC", copy: "A2A protocol client, server, Snaps, and pipelines" },
+  { icon: "users", title: "PISTACHIO", copy: "Led 3-person team automating catalog extraction" },
+  { icon: "target", title: "USF RESEARCH", copy: "YOLOv8 detection pipeline reaching 92% mAP" },
+  { icon: "database", title: "HACKAITHON", copy: "First-prize LLM chatbot for SQL data retrieval" },
+  { icon: "book", title: "USF MSCS", copy: "Master in Computer Science, May 2026" },
 ];
 
-const roles = ["Software Engineer", "Full-Stack Developer", "AI / ML Engineer", "System Designer"];
+const roles = ["Software Engineer Intern", "AI / ML Engineer", "Computer Vision Researcher", "Full-Stack Developer"];
 
 const projects: Project[] = [
   {
@@ -145,29 +147,57 @@ const projects: Project[] = [
 ];
 
 const skillGroups: SkillGroup[] = [
-  { icon: "monitor", title: "FRONTEND", items: ["React", "Next.js", "Tailwind CSS", "TypeScript", "HTML, CSS"] },
-  { icon: "box", title: "BACKEND", items: ["Node.js", "Express.js", "FastAPI", "REST APIs", "GraphQL"] },
-  { icon: "chip", title: "AI / ML", items: ["OpenAI API", "LangChain", "RAG", "LLMs", "Vector DBs"] },
-  { icon: "database", title: "DATABASES", items: ["PostgreSQL", "MongoDB", "Redis", "Firebase", "Prisma ORM"] },
-  { icon: "cloud", title: "CLOUD / DEVOPS", items: ["AWS", "Docker", "GitHub Actions", "Nginx", "CI / CD"] },
-  { icon: "tool", title: "TOOLS", items: ["Git / GitHub", "VS Code", "Postman", "Jest", "Figma"] },
+  { icon: "monitor", title: "FRONTEND", items: ["React.js", "Next.js", "TypeScript", "JavaScript", "HTML / CSS"] },
+  { icon: "box", title: "BACKEND", items: ["Java", "Node.js", "Express", "REST APIs", "SQL"] },
+  { icon: "chip", title: "AI / ML", items: ["PyTorch", "TensorFlow", "Scikit-Learn", "YOLO", "LLMs"] },
+  { icon: "database", title: "DATA", items: ["Pandas", "NumPy", "Pinecone", "JSON", "SQL queries"] },
+  { icon: "cloud", title: "CLOUD / DEVOPS", items: ["AWS EC2 / S3", "Lambda", "EKS / RDS", "GCP Firebase", "Docker / K8s"] },
+  { icon: "tool", title: "TOOLS", items: ["GitHub Actions", "CI / CD", "Ansible", "Terraform", "Packer"] },
 ];
 
 const endpoints: Endpoint[] = [
-  { icon: "mail", method: "GET", path: "/email", value: "hello@devenvaru.dev", action: "SEND" },
-  { icon: "github", method: "GET", path: "/github", value: "github.com/devenvaru", action: "VIEW" },
-  { icon: "linkedin", method: "GET", path: "/linkedin", value: "linkedin.com/in/devenvaru", action: "VIEW" },
-  { icon: "map-pin", method: "GET", path: "/location", value: "Remote * Available", action: "PING" },
+  {
+    icon: "mail",
+    method: "GET",
+    path: "/email",
+    value: "dvvaru@dons.usfca.edu",
+    action: "SEND",
+    href: "mailto:dvvaru@dons.usfca.edu",
+  },
+  {
+    icon: "phone",
+    method: "GET",
+    path: "/phone",
+    value: "424-213-0720",
+    action: "CALL",
+    href: "tel:4242130720",
+  },
+  {
+    icon: "github",
+    method: "GET",
+    path: "/github",
+    value: "github.com/Devenvaruv",
+    action: "VIEW",
+    href: "https://github.com/Devenvaruv",
+  },
+  {
+    icon: "linkedin",
+    method: "GET",
+    path: "/linkedin",
+    value: "linkedin.com/in/deven-v",
+    action: "VIEW",
+    href: "https://www.linkedin.com/in/deven-v",
+  },
 ];
 
 const architectureNodes = [
   { icon: "user" as IconName, title: "CLIENT / USER", detail: "" },
-  { icon: "monitor" as IconName, title: "UI / INTERFACE", detail: "Web / Mobile" },
-  { icon: "server" as IconName, title: "API GATEWAY", detail: "Routing & Auth" },
-  { icon: "box" as IconName, title: "MICROSERVICES", detail: "Business Logic" },
-  { icon: "database" as IconName, title: "DATA LAYER", detail: "Databases / Cache" },
-  { icon: "cloud" as IconName, title: "EXTERNAL SERVICES", detail: "Third-party APIs" },
-  { icon: "activity" as IconName, title: "MONITORING", detail: "Logs / Metrics / Alerts" },
+  { icon: "monitor" as IconName, title: "REACT / NEXT UI", detail: "Dashboards and tools" },
+  { icon: "server" as IconName, title: "JAVA / NODE APIs", detail: "A2A, REST, pipelines" },
+  { icon: "chip" as IconName, title: "AI / CV MODELS", detail: "LLMs, YOLO, SQL agents" },
+  { icon: "database" as IconName, title: "DATA LAYER", detail: "SQL, JSON, Pinecone" },
+  { icon: "cloud" as IconName, title: "CLOUD RUNTIME", detail: "AWS, GCP, Docker" },
+  { icon: "activity" as IconName, title: "VALIDATION", detail: "mAP, outputs, workflows" },
 ];
 
 const projectBuilds: ProjectBuild[] = [
@@ -307,7 +337,7 @@ function BrowserChrome() {
       </div>
       <div className="address-bar">
         <Icon name="lock" size={18} />
-        <span>http://localhost:3000/</span>
+        <span>deven-varu.portfolio</span>
         <Icon name="star" size={24} />
       </div>
       <Icon className="browser-menu" name="more" size={26} />
@@ -324,7 +354,7 @@ function SiteHeader() {
         </span>
         <span>
           <strong>DEVEN VARU</strong>
-          <small>SOFTWARE ENGINEER</small>
+          <small>MSCS @ USF</small>
         </span>
       </a>
 
@@ -415,10 +445,10 @@ function HeroCloud() {
         <h1>DEVEN VARU</h1>
         <span>FULL-STACK / AI SYSTEMS / SOFTWARE ENGINEER</span>
         <ul className="hero-tags" aria-label="Core strengths">
-          <li>Problem Solver</li>
-          <li>Builder</li>
-          <li>System Thinker</li>
-          <li>Lifelong Learner</li>
+          <li>A2A Protocol</li>
+          <li>Computer Vision</li>
+          <li>LLM Workflows</li>
+          <li>Cloud Pipelines</li>
         </ul>
       </div>
     </section>
@@ -445,9 +475,9 @@ function OverviewPanel() {
   return (
     <SketchPanel className="overview-panel numbered-panel" id="about" title="1. SYSTEM OVERVIEW (PROFILE)" icon="user">
       <p className="overview-copy">
-        I design, build, and ship scalable software systems that solve real-world problems. Experienced in full-stack
-        development, AI systems, and cloud technologies. Passionate about clean code, system design, and measurable
-        impact.
+        I am a Master&apos;s in Computer Science student at the University of San Francisco building AI, computer
+        vision, and full-stack systems. My work spans A2A protocol implementation at SnapLogic, AI catalog automation
+        at Pistachio, YOLOv8 research pipelines, and first-prize hackathon work on LLM-powered SQL retrieval.
       </p>
       <div className="profile-grid">
         {profileCards.map((card) => (
@@ -544,15 +574,16 @@ function EducationPanel() {
       <div className="knowledge-cylinder">
         <div className="cylinder-top" aria-hidden="true" />
         <div className="cylinder-body">
-          <p>B.Tech in Computer Science</p>
-          <p>Jawaharlal Nehru Technological University, India</p>
-          <p>2018 - 2022</p>
+          <p>Graduate Education</p>
+          <p>University of San Francisco</p>
+          <p>Master in Computer Science</p>
+          <p>Aug 2023 - May 2026</p>
+          <p>San Francisco, CA</p>
           <hr />
-          <p>Data Structures & Algorithms</p>
-          <p>System Design</p>
-          <p>OS, CN, DBMS</p>
-          <p>Software Engineering</p>
-          <p>Continuous Learning</p>
+          <p>AI / Machine Learning</p>
+          <p>Computer Vision</p>
+          <p>Cloud Infrastructure</p>
+          <p>Full-Stack Systems</p>
         </div>
         <div className="cylinder-bottom" aria-hidden="true" />
       </div>
@@ -571,15 +602,13 @@ function ContactPanel() {
               {endpoint.method} <code>{endpoint.path}</code>
             </strong>
             <span>{endpoint.value}</span>
-            <SketchButton href={endpoint.path === "/email" ? "mailto:hello@devenvaru.dev" : "#contact"}>
-              {endpoint.action}
-            </SketchButton>
+            <SketchButton href={endpoint.href}>{endpoint.action}</SketchButton>
           </li>
         ))}
       </ul>
       <div className="contact-callout">
         <Icon name="monitor" size={25} />
-        <span>Let&apos;s build something impactful together.</span>
+        <span>Available for software engineering, AI, and computer vision roles.</span>
       </div>
     </SketchPanel>
   );
@@ -667,12 +696,12 @@ function SiteFooter() {
   return (
     <footer className="site-footer">
       <Icon name="server" size={45} />
-      <span>(c) 2024 DEVEN VARU * ALL RIGHTS RESERVED</span>
+      <span>(c) 2026 DEVEN VARU * SAN FRANCISCO, CA</span>
       <span className="built-with">
         BUILT WITH <Icon name="heart" size={28} /> AND <Icon name="code" size={28} />
       </span>
       <span className="uptime">
-        SYSTEM UPTIME: 99.99% <Icon name="bars" size={46} />
+        AI / CV / FULL-STACK <Icon name="bars" size={46} />
       </span>
     </footer>
   );
@@ -850,6 +879,12 @@ const iconPaths: Record<IconName, ReactNode> = {
     </>
   ),
   more: <path d="M32 16v1M32 31v1M32 46v1" />,
+  phone: (
+    <>
+      <path d="M20 12h12l5 12-7 4c4 8 10 14 18 18l4-7 12 5v12c0 3-2 5-5 5-30-1-54-25-55-55 0-3 2-5 5-5Z" />
+      <path d="M39 13c7 2 12 7 14 14M40 23c3 1 5 3 6 6" />
+    </>
+  ),
   refresh: <path d="M48 21A20 20 0 1 0 52 36M48 21V10h-11" />,
   rocket: (
     <>
