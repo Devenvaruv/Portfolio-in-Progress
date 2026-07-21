@@ -522,7 +522,7 @@ function ProjectsPanel() {
   return (
     <SketchPanel className="projects-panel numbered-panel" id="projects" title="3. PROJECT ARCHITECTURE (FEATURED)">
       <div className="project-grid">
-        {projects.map((project) => (
+        {projects.slice(0, 3).map((project) => (
           <article key={project.title} className="project-card">
             <div className="card-top" aria-hidden="true">
               {Array.from({ length: 6 }).map((_, index) => (
