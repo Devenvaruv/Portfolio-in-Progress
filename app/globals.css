@@ -491,7 +491,7 @@ ol {
 
 .theme-toggle.is-night .theme-icon-moon {
   opacity: 1;
-  transform: translateY(0) rotate(0deg) scale(1);
+  transform: translate(1px, 0) rotate(0deg) scale(1);
 }
 
 .system-board {

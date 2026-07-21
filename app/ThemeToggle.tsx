@@ -80,8 +80,8 @@ function SunIcon() {
 function MoonIcon() {
   return (
     <svg className="theme-icon theme-icon-moon" fill="none" height="38" viewBox="0 0 64 64" width="38">
-      <path d="M44 51c-15 5-31-6-31-22 0-9 5-17 13-21-2 15 9 29 24 29-1 6-3 11-6 14Z" />
-      <path d="M45 13l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5ZM52 32l1 3 3 1-3 1-1 3-1-3-3-1 3-1 1-3Z" />
+      <path d="M45 47c-4 3-9 5-15 5-12 0-22-10-22-22 0-9 6-17 14-20-2 16 10 30 26 28-1 3-2 6-3 9Z" />
+      <path d="M43 16l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5Z" />
     </svg>
   );
 }
